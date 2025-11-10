@@ -121,10 +121,6 @@ Each task:
 npm install
 npm run dev
 
-yaml
-Sao chép mã
-Access at: http://localhost:5173
-
 ---
 
 ## Author
