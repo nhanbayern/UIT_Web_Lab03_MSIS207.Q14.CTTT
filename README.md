@@ -107,34 +107,6 @@ Each task:
 - Has action buttons (Move / Back / Done / Delete)
 - Dynamically styled with smooth animations and responsive layout
 
----
-
-## Project Structure
-src/
-│
-├── App.jsx
-├── main.jsx
-│
-├── components/
-│ ├── UserProfile.jsx
-│ ├── Counter.jsx
-│ ├── Login.jsx
-│ ├── Card.jsx
-│ ├── Accordion.jsx
-│ ├── Panel.jsx
-│
-├── todo/
-│ ├── TodoApp.jsx
-│ ├── TodoForm.jsx
-│ ├── TodoList.jsx
-│ ├── TodoItem.jsx
-│
-└── assets/
-
-yaml
-Sao chép mã
-
----
 
 ## Technologies Used
 - React 19 (Vite)
