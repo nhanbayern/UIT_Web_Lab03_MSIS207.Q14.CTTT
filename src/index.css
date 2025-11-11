@@ -416,3 +416,198 @@ ul {
 .delete-btn:hover {
   background-color: #e53935;
 }
+:root {
+  --radius-lg: 16px;
+  --radius-pill: 12px;
+  --nav-h: 48px;
+  --nav-minw: 160px; /* giữ độ rộng ổn định, tránh nhảy khi active */
+}
+
+/* Container toàn trang */
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* Header/Nav block full width */
+.navbar {
+  width: 100%;
+  background: #eef2f7;
+  padding: 24px 0 16px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Tiêu đề */
+.navbar-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+/* Dãy tab */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+
+/* Mỗi tab là button, cố định chiều cao/độ rộng để không nhảy */
+.nav-btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  height: var(--nav-h);
+  min-width: var(--nav-minw);
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  /* Quan trọng: dùng cùng font-weight cho cả active/inactive để không đổi width */
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+  background: #e2e8f0;
+  color: #0f172a;
+  box-sizing: border-box;
+}
+
+.nav-btn:hover {
+  transform: translateY(-1px);
+}
+
+.nav-btn.active {
+  background: #1e40af;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(30, 64, 175, 0.25);
+}
+
+/* Khối nội dung mỗi exercise: bo góc, đồng bộ khoảng cách */
+.section {
+  width: 90vw; /* ✅ rộng 90% viewport */
+  max-width: 1300px; /* ✅ giữ giới hạn */
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 40px 50px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Giữ scrollbar ổn định để tránh “giật layout” khi trang dài/ngắn khác nhau */
+:root {
+  scrollbar-gutter: stable both-edges;
+}
+
+/* Responsive nhẹ */
+@media (max-width: 768px) {
+  :root {
+    --nav-minw: 130px;
+  }
+  .section {
+    width: 98%;
+    padding: 20px;
+  }
+}
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* === Login Form Styling === */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-form {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 45px;
+  width: 420px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.login-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.login-subtext {
+  font-size: 0.95rem;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.input-group input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.login-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.login-info {
+  margin-top: 25px;
+  color: #334155;
+  font-size: 0.95rem;
+  text-align: center;
+}
